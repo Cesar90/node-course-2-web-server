@@ -1,3 +1,4 @@
+//nodemon server.js -e js,hbs
 const express = require('express');
 const hbs = require('hbs');
 const fs = require("fs");
@@ -54,4 +55,6 @@ app.get('/bad', (req, res) => {
     });
 });
 
-app.listen(process.env.PORT);
+app.listen(process.env.PORT, ()=>{
+    console.log('Server is up on port ' + process.env.PORT);
+});
